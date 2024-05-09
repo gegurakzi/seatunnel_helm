@@ -64,5 +64,5 @@ spec:
         runAsUser: 65534
         seccompProfile:
           type: RuntimeDefault
-      serviceAccountName: {{ include "seatunnel.serviceAccountName" . }}
+      serviceAccountName: {{ include "seatunnel.reloader.serviceAccountName" . }}
 {{- end }}

@@ -9,12 +9,6 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-serviceAccount:
-  create: true
-  automount: true
-  annotations: {}
-  name: ""
-
 podAnnotations: {}
 podLabels: {}
 
@@ -30,7 +24,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: NodePort
+  type: LoadBalancer
 
 resources:
   limits:
@@ -85,7 +79,6 @@ reloader:
     heritage: "Helm"
     app.kubernetes.io/managed-by: "Helm"
   serviceAccount:
-    create: true
     automount: true
     # Annotations to add to the service account
     annotations: { }

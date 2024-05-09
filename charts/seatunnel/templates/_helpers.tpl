@@ -63,17 +63,6 @@ app.kubernetes.io/name: {{ include "seatunnel.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "seatunnel.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "seatunnel.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
-{{- end }}
-
 {{- define "seatunnel.reloader.serviceAccountName" -}}
 {{- if .Values.reloader.enabled }}
 {{- default (printf "%s-reloader" (include "seatunnel.fullname" .)) .Values.serviceAccount.name }}
