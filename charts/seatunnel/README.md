@@ -31,7 +31,7 @@ sink {
   }
 }
 ```
-you can ckeck whether seatunnel cluster has successfully deployed by these commands.
+you can ckeck if seatunnel cluster has successfully deployed by these commands.
 
 
 
