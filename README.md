@@ -1,5 +1,7 @@
 # Helm chart for Apache SeaTunel on Kubernetes
 
+## [About Apache SeaTunnel](https://seatunnel.apache.org/docs/2.3.5/about)
+
 ### Configurations
 
 | Parameter                                | Default                     | Description                                                                                                                                     |
